@@ -1,1 +1,20 @@
+class _9PalindromeNumber {
+    public boolean isPalindrome(int x) {
+        int num = 0;
+        int rev = x;
+        while (x != 0 && x > 0) {
+            num = num * 10 + x % 10;
+            x = x / 10;
+        }
+        if (num == rev) {
+            return true;
+        }
+        return false;
+    }
 
+    public static void main(String[] args) {
+        int value = 1298921;
+        _9PalindromeNumber obj = new _9PalindromeNumber();
+        System.out.println(obj.isPalindrome(value));
+    }
+}
